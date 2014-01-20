@@ -1,10 +1,9 @@
 package com.devdiscoveries.elasticsearch.demo;
 
 /**
- * Hello world!
- *
+ * Elasticsearch demo application. 
  */
-public class App 
+public class ElasticsearchDemoApp 
 {
     public static void main( String[] args )
     {
