@@ -16,4 +16,16 @@ public class VacancyIndexer implements Indexer<Vacancy> {
 	return false;
     }
 
+    @Override
+    public boolean upgradeIndex() {
+	// TODO Auto-generated method stub
+	return false;
+    }
+
+    @Override
+    public boolean deleteDocument(Vacancy document) {
+	// TODO Auto-generated method stub
+	return false;
+    }
+
 }
