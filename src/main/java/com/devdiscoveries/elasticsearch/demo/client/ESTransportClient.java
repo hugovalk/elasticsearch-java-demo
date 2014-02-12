@@ -6,10 +6,19 @@ import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
 
+/**
+ * Wrapper around an ElasticSearch {@link TransportClient} node.
+ * 
+ * @author hugovalk
+ * 
+ */
 public class ESTransportClient implements ESClient {
 
     private TransportClient client;
 
+    /**
+     * Default constructor, initializing the transport client.
+     */
     public ESTransportClient() {
 	final Settings settings = ImmutableSettings.settingsBuilder()
 		.put("client.transport.sniff", true)
@@ -19,11 +28,13 @@ public class ESTransportClient implements ESClient {
 			"127.0.0.1", 9300));
     }
 
+    /** {@inheritDoc} */
     @Override
     public Client getClient() {
 	return client;
     }
 
+    /** {@inheritDoc} */
     @Override
     public void shutdown() {
 	client.close();
